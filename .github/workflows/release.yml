@@ -9,7 +9,7 @@ env:
   GHCR_IMAGE: ghcr.io/${{ github.repository }}
   DOCKERHUB_IMAGE: ${{ github.repository }}
 
-jobs:
+
 #  check-version:
 #    name: Check Version
 #    runs-on: ubuntu-latest
@@ -64,7 +64,7 @@ jobs:
 #            --access=public \
 #            --no-git-checks \
 #            --tag ${{ needs.check-version.outputs.prerelease == 'true' && 'canary'  || 'latest' }}
-
+jobs:
   build-images:
     name: Build Images
     runs-on: ubuntu-latest
